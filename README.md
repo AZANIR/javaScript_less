@@ -1,6 +1,6 @@
 <h3 align="center">Full course on JavaScript + React</h3>
 
-<p align="left"> <img src="https://itproger.com/img/news/1540394188.jpg" alt="javascript" /> </p>
+<p align="center"> <img src="https://itproger.com/img/news/1540394188.jpg" alt="javascript" /> </p>
 
 <p align="left">  Lessons from this course. </p>
 
