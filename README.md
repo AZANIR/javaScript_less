@@ -1,8 +1,8 @@
-<h3 align="center">lesson fron thie course</h3>
+<h3 align="center">Full course on JavaScript + React</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=azanir&label=Profile%20views&color=0e75b6&style=flat" alt="azanir" /> </p>
+<p align="left"> <img src="https://itproger.com/img/news/1540394188.jpg" alt="javascript" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=azanir" alt="azanir" /></a> </p>
+<p align="left">  Lessons from this course. </p>
 
 
 <h3 align="left">Languages and Tools:</h3>
