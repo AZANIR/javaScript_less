@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded',()=>{
       tabsParent = document.querySelector('.tabheader__items');
 
   function hideTabContent(){
-    tabsContent.forEach(item=>{
+    tabsContent.forEach(item =>{
       item.classList.add('hide');
       item.classList.remove('show','fade');
     });
@@ -35,4 +35,5 @@ window.addEventListener('DOMContentLoaded',()=>{
       })
     }
   });
+  // timer
 });

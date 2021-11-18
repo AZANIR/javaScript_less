@@ -17,7 +17,7 @@ btns[0].addEventListener('click',()=>{
 //   }else{
 //     btns[1].classList.remove('red');
 //   }
-	btns[1].classList.toggle('red')
+	btns[1].classList.toggle('red');
 });
 
 //console.log(btns[0].className);
