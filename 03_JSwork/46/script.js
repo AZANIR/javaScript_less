@@ -1,7 +1,34 @@
 'use strict';
-//es5
-// const num = new Number(3);
-// console.log(num);
+
+function showThis(){
+    console.log(this);
+}
+showThis();
+// 1) обычная функция this = window , но если стоит use strict -undefined;
+
+function showThis2(a,b){
+    console.log(this);
+    function sum() {
+        console.log(this);
+        return a+b;
+    }
+    console.log(sum());
+}
+showThis2(4,5);
+
+const obj = {
+    a: 20,
+    b: 15,
+    sum2: function () {
+        console.log(this);
+        function shout(){
+            console.log(this);
+        }
+        shout();
+    }
+}
+obj.sum2();
+// 2) Контекст у методов обьекта будет сам обьект.
 
 function User(name, id){
     this.name = name;
@@ -11,16 +38,52 @@ function User(name, id){
         console.log(`Hello ${this.name}`)
     }
 }
+let ivan  = new User('Leonid', 15);
 
-User.prototype.exit = function () {
-    console.log(`User ${this.name} leave!`)
+// 3) this в конструкторах и классах это новый экземпляр обьекта.
+
+function sayName(surname) {
+    console.log(this);
+    console.log(this.name + surname);
 }
-const ivan = new User('Leonid', 50);
-const alex = new User('Alex', 28);
+const user = {name: 'John'};
 
-ivan.hello();
-alex.hello();
-ivan.exit();
+sayName.call(user, 'Smith');
+sayName.apply(user,['Smith']);
 
-console.log(ivan);
-console.log(alex);
+function count(num) {
+    return this*num;
+}
+const double = count.bind(2);
+
+console.log(double(3));
+console.log(double(13));
+//4) Ручная привязка this: call, apply, bind;
+
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function () {
+    console.log(this);
+    this.style.backgroundColor = 'red';
+});
+//arrow variant
+btn.addEventListener('click', (e)=> {
+    e.target.style.backgroundColor = 'red';
+});
+
+const obj2 = {
+    num:5,
+    sayNumber: function(){
+        const say = () =>{
+            console.log(this);
+        }
+        say();
+    }
+};
+
+obj2.sayNumber();
+
+const dobleNum = a => a*2;
+console.log(dobleNum(4));
+
+//
